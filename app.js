@@ -6,7 +6,7 @@ const userRouter = require('./routes/user');
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
-app.use('/api/v1', userRouter);
+app.use('/api/v1/users', userRouter);
 
 app.listen(port, () => {
   console.log(`listening on port ${port}`);
