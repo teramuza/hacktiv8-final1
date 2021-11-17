@@ -3,7 +3,8 @@ const {
   PG_HOST,
   PG_USER,
   PG_PASS,
-  PG_PORT
+  PG_PORT,
+  PG_DB_NAME
 } = process.env;
 const { Pool } = require('pg');
 
