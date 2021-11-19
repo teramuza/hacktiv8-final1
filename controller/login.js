@@ -26,7 +26,7 @@ module.exports = async (req, res) => {
 
       const isValidPassword = bcrypt.compare(password, result.rows[0].password);
       if (isValidPassword) {
-        let token = jwt.sign(data, 'finalp_1', {
+        let token = jwt.sign(data, 'aff4d19955f3afe4a1ec122e969750d09c77510cdb9eca85df4335663563', {
           expiresIn: '1h'
         })
         res.status(200).json({
