@@ -1,7 +1,5 @@
 const db = require('../config/db');
 const response = require('../helper/response.utils');
-const moment = require('moment');
-moment.locale('id');
 
 const createReflections = async (req, res) => {
     try {
@@ -11,8 +9,8 @@ const createReflections = async (req, res) => {
             take_away
         } = req.body;
         const userId = req?.user?.id;
-        let date = moment().format('l');
-        // date = date.toLocaleDateString() + " " + date.toLocaleTimeString();
+        let date = new Date();
+        date = date.toLocaleDateString() + " " + date.toLocaleTimeString();
         db.query(`INSERT INTO reflections (success, low_point, take_away, owner_id, created_date) VALUES ('${success})', '${low_point}', '${take_away}', '${userId}', '${date}') `, (err, result) => {
             if (err)
                 return response.badRequestResponse(res, err.message);
