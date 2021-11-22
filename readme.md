@@ -50,7 +50,7 @@ To run this project, you will need to add the following environment variables to
 
 `PG_PASS` = `your postgres user password`
 
-`PG_DB_NAME` = `you can create new db and import sql from /sources/db.sql`
+`PG_DB_NAME` = `you can create new db and import sql from /sources/db.*.sql`
 
 `JWT_SECRET_KEY` = `you can generate your own JWT_SECRET_KEY`
 
