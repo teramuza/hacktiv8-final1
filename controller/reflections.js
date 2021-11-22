@@ -108,7 +108,7 @@ const deleteReflections = async (req, res) => {
                 })
             }
         });
-        } catch (e) {
+    } catch (e) {
         res.status(503).send(e.message);
     }
 }
