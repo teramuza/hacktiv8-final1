@@ -5,6 +5,10 @@
   "repository": "https://github.com/teramuza/hacktiv8-final1.git",
   "author": "HafidurR <deifah126@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "start": "node app.js",
+    "test": "nodemon app.js"
+  },
   "dependencies": {
     "bcrypt": "^5.0.1",
     "dotenv": "^10.0.0",
