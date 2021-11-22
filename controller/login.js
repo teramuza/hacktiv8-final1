@@ -1,6 +1,7 @@
 const db = require('../config/db');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
+const response = require('../helper/response.utils');
 
 module.exports = async (req, res) => {
   try {
@@ -25,26 +26,16 @@ module.exports = async (req, res) => {
           let token = jwt.sign(data, 'aff4d19955f3afe4a1ec122e969750d09c77510cdb9eca85df4335663563', {
             expiresIn: '1h'
           })
-          res.status(200).json({
-            status: 'success',
-            message: 'success login',
-            token
-          })
+          return response.successResponse(res, {token}, 'success login');
         } else {
-          return res.status(400).json({
-            status: 'error',
-            message: 'email or password incorrect'
-          })
+          return response.unauthorizedResponse(res, 'email or password incorrect');
         }
       } else {
-        return res.status(404).json({
-          status: 'Not found',
-          message: "Data tidak ditemukan",
-        })
+        return response.unauthorizedResponse(res, 'user not found');
       }
 
     })
   } catch (e) {
-    res.status(503).send(e.message);
+    response.serverErrorResponse(res, e.message)
   }
 }
