@@ -10,7 +10,7 @@ module.exports = async (req, res) => {
     } = req.body
 
 
-    db.query("SELECT * FROM users WHERE email = '" + email + "' ", (err, result) => {
+    db.query(`SELECT * FROM users WHERE email = ${email}`, (err, result) => {
       if (err) {
         return res.status(400).json({
           status: 'error',
@@ -18,7 +18,7 @@ module.exports = async (req, res) => {
         })
       }
 
-      if (result.rowCount != 0) {
+      if (result.rowCount !== 0) {
         const data = {
           id: result.rows[0].id,
           name: result.rows[0].name,
