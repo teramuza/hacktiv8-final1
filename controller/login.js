@@ -2,7 +2,9 @@ const db = require('../config/db');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 const response = require('../helper/response.utils');
+require('dotenv').config();
 
+const {JWT_SECRET_KEY} = process.env;
 module.exports = async (req, res) => {
   try {
     const {
@@ -23,7 +25,7 @@ module.exports = async (req, res) => {
 
         const isValidPassword = bcrypt.compare(password, result.rows[0].password);
         if (isValidPassword) {
-          let token = jwt.sign(data, 'aff4d19955f3afe4a1ec122e969750d09c77510cdb9eca85df4335663563', {
+          let token = jwt.sign(data, JWT_SECRET_KEY, {
             expiresIn: '1h'
           })
           return response.successResponse(res, {token}, 'success login');
