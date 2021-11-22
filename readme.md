@@ -59,6 +59,8 @@ To run this project, you will need to add the following environment variables to
 
 ## API Reference
 
+- You can see my collection (postman) [here](https://www.getpostman.com/collections/e85afb4dedcb6e4c768c) 
+
 ### Register
 
 ```http
