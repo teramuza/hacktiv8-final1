@@ -7,8 +7,15 @@ const successResponse = (res, data, message) => {
 }
 
 const unauthorizedResponse = (res, message) => {
-    return res.status(403).json({
+    return res.status(401).json({
         status: 'unauthorized',
+        message
+    })
+}
+
+const forbiddenResponse = (res, message) => {
+    return res.status(403).json({
+        status: 'forbidden',
         message
     })
 }
@@ -31,6 +38,7 @@ const serverErrorResponse = (res, message) => {
 module.exports = {
     successResponse,
     unauthorizedResponse,
+    forbiddenResponse,
     badRequestResponse,
     serverErrorResponse
 }
