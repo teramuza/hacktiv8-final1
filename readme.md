@@ -66,6 +66,7 @@ To run this project, you will need to add the following environment variables to
 ```
 
 - **Body**
+
 | Key | Type     | Description                |
 | :-------- | :------- | :------------------------- |
 | `name` | `string` | |
@@ -80,6 +81,7 @@ To run this project, you will need to add the following environment variables to
 ```
 
 - **Body**
+
 | Key | Type     | Description                       |
 | :-------- | :------- | :-------------------------------- |
 | `email`      | `string` | **Required** |
@@ -92,11 +94,13 @@ To run this project, you will need to add the following environment variables to
 ```
 
 - **Header**
+
 | Key | Type     | Description                       |
 | :-------- | :------- | :-------------------------------- |
 | `x-access-token`      | `string` | **Required**, JWT Token |
 
 - **Body**
+
 | Key | Type     | Description                       |
 | :-------- | :------- | :-------------------------------- |
 | `success`      | `string` | **Required** |
@@ -110,6 +114,7 @@ To run this project, you will need to add the following environment variables to
 ```
 
 - **Header**
+
 | Key | Type     | Description                       |
 | :-------- | :------- | :-------------------------------- |
 | `x-access-token`      | `string` | **Required**, JWT Token |
@@ -121,11 +126,13 @@ To run this project, you will need to add the following environment variables to
 ```
 
 - **Header**
+
 | Key | Type     | Description                       |
 | :-------- | :------- | :-------------------------------- |
 | `x-access-token`      | `string` | **Required**, JWT Token |
 
 - **Body**
+
 | Key | Type     | Description                       |
 | :-------- | :------- | :-------------------------------- |
 | `success`      | `string` | **Required** |
@@ -139,6 +146,7 @@ To run this project, you will need to add the following environment variables to
 ```
 
 - **Header**
+
 | Key | Type     | Description                       |
 | :-------- | :------- | :-------------------------------- |
 | `x-access-token`      | `string` | **Required**, JWT Token |
